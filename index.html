@@ -3,14 +3,205 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rack Pro Audio</title>
+<title>Rack Pro Audio V2</title>
+
+<style>
+body{
+margin:0;
+background:#111;
+font-family:Arial;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+color:white;
+}
+
+.rack{
+width:1000px;
+max-width:95%;
+background:#2c2c2c;
+border-radius:12px;
+padding:20px;
+box-shadow:0 0 25px #000;
+}
+
+.header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:20px;
+}
+
+.logo{
+font-size:24px;
+font-weight:bold;
+color:#00ff88;
+}
+
+.screen{
+background:#003300;
+color:#00ff00;
+padding:10px;
+border-radius:6px;
+font-family:monospace;
+width:300px;
+text-align:center;
+}
+
+.panel{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+}
+
+.card{
+background:#1b1b1b;
+padding:15px;
+border-radius:8px;
+}
+
+h3{
+margin-top:0;
+}
+
+button{
+padding:10px;
+margin:4px;
+border:none;
+border-radius:5px;
+background:#444;
+color:white;
+}
+
+button:hover{
+background:#00aa55;
+}
+
+.meter{
+height:12px;
+background:#333;
+border-radius:20px;
+overflow:hidden;
+margin:10px 0;
+}
+
+.fill{
+height:100%;
+width:70%;
+background:lime;
+animation:move 1s infinite alternate;
+}
+
+@keyframes move{
+from{width:20%;}
+to{width:95%;}
+}
+
+.slider{
+width:100%;
+}
+
+.footer{
+margin-top:20px;
+text-align:center;
+color:#888;
+}
+</style>
+
 </head>
 
-<body style="background:#111;color:white;font-family:Arial;text-align:center;margin-top:100px;">
+<body>
 
-<h1>🎛 Rack Pro Audio</h1>
+<div class="rack">
 
-<p>Versi 1 Sedang Dibangun...</p>
+<div class="header">
+
+<div class="logo">
+Rack Pro Audio
+</div>
+
+<div class="screen">
+96kHz | DSP Ready
+</div>
+
+</div>
+
+<div class="panel">
+
+<div class="card">
+
+<h3>INPUT A</h3>
+
+<div class="meter">
+<div class="fill"></div>
+</div>
+
+Gain
+
+<input class="slider" type="range">
+
+<button>Mute</button>
+<button>Edit</button>
+
+</div>
+
+<div class="card">
+
+<h3>OUTPUT A</h3>
+
+<div class="meter">
+<div class="fill"></div>
+</div>
+
+Level
+
+<input class="slider" type="range">
+
+<button>Limiter</button>
+<button>Delay</button>
+
+</div>
+
+<div class="card">
+
+<h3>DSP</h3>
+
+<button>EQ</button>
+
+<button>Crossover</button>
+
+<button>Compressor</button>
+
+<button>Limiter</button>
+
+<button>Delay</button>
+
+<button>Preset</button>
+
+</div>
+
+<div class="card">
+
+<h3>Status</h3>
+
+<p>Power : ON</p>
+
+<p>Sample Rate : 96kHz</p>
+
+<p>Input : Stereo</p>
+
+<p>Output : Stereo</p>
+
+</div>
+
+</div>
+
+<div class="footer">
+Rack Pro Audio V2 - By HNS Studio
+</div>
+
+</div>
 
 </body>
 </html>
